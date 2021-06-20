@@ -15,7 +15,7 @@ Gulpfile setup for Javascript ES6 compiling, SCSS and images handling.
 Check your **Node Js** version.
 
 ```cmd
-$ node -v
+node -v
 ```
 
 ### Clone Repository
@@ -23,7 +23,7 @@ $ node -v
 Clone this **Gulp Compiler** repository using this command
 
 ```cmd
-$ git clone https://github.com/rajubepary/gulp-compiler
+git clone https://github.com/rajubepary/gulp-compiler
 ```
 
 ### Terminal Command
@@ -31,19 +31,19 @@ $ git clone https://github.com/rajubepary/gulp-compiler
 - Install Gulp CLI Globaly
 
 ```cmd
-$ npm install --global gulp-CLI
+npm install --global gulp-CLI
 ```
 
 - Install Node Modules
 
 ```cmd
-$ npm install
+npm install
 ```
 
 - Check Gulp Version
 
 ```cmd
-$ gulp -v
+gulp -v
 ```
 
 ### Configure Assets Paths of Gulpfile
@@ -80,29 +80,29 @@ const paths = {
 - Run **`css`** Compiler
 
 ```cmd
-$ gulp css
+gulp css
 ```
 
 - Run **`JavaScript`** Compiler
 ```cmd
-$ gulp js
+gulp js
 ```
 
 - Run **`images`** Compiler
 
 ```cmd
-$ gulp images
+gulp images
 ```
 
 - Run **`Default Compiler`** (all compiler in paraller way)
 ```cmd
-$ gulp
+gulp
 ```
 
 - Run **`Watch Compiler`** (all compiler in paraller way with **`browser_sync`**) **`(Recommended)`** First run the `default compiler` to create all files then stop compilling press ```ctrl+c``` then run `watch compiler` only for first time
 ```cmd
-$ gulp
+gulp
 
-$ gulp watch
+gulp watch
 ```
 ## **Enjoy Compilling!**
