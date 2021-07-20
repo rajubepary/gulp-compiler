@@ -55,13 +55,15 @@ const paths = {
     baseFolder: "./",
   },
   style: {
-    srcFile: "src/scss/style.scss",
+    src1: "src/scss/style.scss",
+    src2: "src/scss/slider.scss",
     watch: "src/scss/**/*.scss",
     destation: "./assets/css/",
     mapUrl: "./",
   },
   js: {
-    srcFile: "script.js",
+    src1: "script.js",
+    src2: "slider.js",
     file: "script",
     folder: "src/js/",
     watch: "src/js/**/*.js",
@@ -73,6 +75,14 @@ const paths = {
     watch: "src/images/**/*.*",
     destation: "./assets/images/",
   },
+};
+
+/**
+ * Store file location in an object
+ */
+const srcFile = {
+  style: [paths.style.src1, paths.style.src2],
+  js: [paths.js.src1, paths.js.src2],
 };
 
 /**
@@ -103,7 +113,7 @@ exports.reload = reload;
  * @exports css    Run gulp css command in terminal to run this task.
  */
 const css = (done) => {
-  src(paths.style.srcFile)
+  src(srcFile.style)
     .pipe(sourcemaps.init())
     .pipe(
       sass({
@@ -129,7 +139,7 @@ exports.css = css;
  * @this jsFiles  This is an array of all javascript files.
  * @array jsFiles Array item get from @this paths project assets variable obeject
  */
-const jsFiles = [paths.js.srcFile];
+const jsFiles = srcFile.js;
 
 /**
  * @function js() Compile ES6 javaScript file to minified venella JavaScript.
