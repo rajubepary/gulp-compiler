@@ -49,29 +49,43 @@ gulp -v
 ### Configure Assets Paths of Gulpfile
 
 ```js
+/**
+ * @this paths    This is project assets variable obeject.
+ * Change source, destation folder name and default file name.
+ */
 const paths = {
   server: {
     baseFolder: "./",
   },
   style: {
-    srcFile: "src/scss/style.scss", //add scss source file url
-    watch: "src/scss/**/*.scss", //add scss warch url
-    destation: "./assets/css/", //add compiled css file destation url
-    mapUrl: "./", //add compiled css file map destation url
+    src1: "src/scss/style.scss",  //add scss source file url
+    src2: "src/scss/slider.scss", //add scss source file url
+    watch: "src/scss/**/*.scss",  //add scss warch url
+    destation: "./assets/css/",   //add compiled css file destation url
+    mapUrl: "./",                 //add compiled css file map destation url
   },
   js: {
-    srcFile: "script.js", //add js source file url
-    file: "script", //add js source file name without extention
-    folder: "src/js/", //add js source folder url
-    watch: "src/js/**/*.js", //add js warch url
-    destation: "./assets/js/", //add compiled js file destation url
-    mapUrl: "./", //add compiled js file map destation url
+    src1: "script.js",          //add js source file url
+    src2: "slider.js",          //add js source file url
+    file: "script",             //add js source file name without extention
+    folder: "src/js/",          //add js source folder url
+    watch: "src/js/**/*.js",    //add js warch url
+    destation: "./assets/js/",  //add compiled js file destation url
+    mapUrl: "./",               //add compiled js file map destation url
   },
   images: {
-    srcFile: "src/images/**/*", //add images source folder url
-    watch: "src/images/**/*.*", //add images warch url
+    srcFile: "src/images/**/*",    //add images source folder url
+    watch: "src/images/**/*.*",    //add images warch url
     destation: "./assets/images/", //add compiled images file destation url
   },
+};
+
+/**
+ * Store file location in an object
+ */
+const srcFile = {
+  style: [paths.style.src1, paths.style.src2], //insert style paths from paths object
+  js: [paths.js.src1, paths.js.src2],          //insert js paths from paths object
 };
 ```
 
