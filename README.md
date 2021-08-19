@@ -94,18 +94,18 @@ const srcFile = {
 - Run **`css`** Compiler
 
 ```cmd
-gulp css
+npm rum gulp:css
 ```
 
 - Run **`JavaScript`** Compiler
 ```cmd
-gulp js
+npm rum gulp:js
 ```
 
 - Run **`images`** Compiler
 
 ```cmd
-gulp images
+npm rum gulp:images
 ```
 
 - Run **`Default Compiler`** (all compiler in paraller way)
@@ -113,10 +113,8 @@ gulp images
 gulp
 ```
 
-- Run **`Watch Compiler`** (all compiler in paraller way with **`browser_sync`**) **`(Recommended)`** First run the `default compiler` to create all files then stop compilling press ```ctrl+c``` then run `watch compiler` only for first time
+- Run **`Watch Compiler`** (all compiler in paraller way with **`browser_sync`**) **`(Recommended)`**. This will automatically reload browser when any watch file change. 
 ```cmd
-gulp
-
-gulp watch
+npm rum gulp:watch
 ```
 ## **Enjoy Compilling!**

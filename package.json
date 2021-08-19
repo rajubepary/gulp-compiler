@@ -4,7 +4,11 @@
   "description": "This is a gulp compiler",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gulp": "gulp",
+    "gulp:css": "gulp css",
+    "gulp:js": "gulp js",
+    "gulp:images": "gulp images",
+    "gulp:watch": "npm run gulp & gulp watch"
   },
   "repository": {
     "type": "git",
