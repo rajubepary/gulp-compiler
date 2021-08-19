@@ -110,7 +110,7 @@ npm rum gulp:images
 
 - Run **`Default Compiler`** (all compiler in paraller way)
 ```cmd
-gulp
+npm run gulp
 ```
 
 - Run **`Watch Compiler`** (all compiler in paraller way with **`browser_sync`**) **`(Recommended)`**. This will automatically reload browser when any watch file change. 
